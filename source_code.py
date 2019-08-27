@@ -1,9 +1,10 @@
 """ It is a simple linear regression model which can predict the GDP of India"""
-
 #Importing the required libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+
+
 
 # Importing the dataset
 dataset = pd.read_csv('Year vs GDP - Sheet1.csv')
@@ -12,7 +13,7 @@ Y = dataset.iloc[:, 1].values
 
 # Splitting the dataset into the Train set and Test set
 
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.3, random_state = 0)
 
 #fitting our simple linear regressor model to our train set
